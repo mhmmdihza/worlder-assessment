@@ -24,7 +24,7 @@ func main() {
 	e.Use(middlewareOne)
 	e.GET("/data", handler.RetrieveSensor)
 	e.POST("/insertsensors",handler.InsertSensorValue)
-	e.Logger.Fatal(e.Start(":8088"))
+	e.Logger.Fatal(e.Start(":8080"))
 
 }
 func middlewareOne(next echo.HandlerFunc) echo.HandlerFunc {
